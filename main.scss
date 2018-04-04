@@ -1,0 +1,203 @@
+$font: 'Ubuntu',
+sans-serif;
+$lilac: #810DF1;
+$pink: #F10D70;
+$white: #FFFFFF;
+$black: #2F233A;
+$orange:#F15D0D;
+$gray:#E4E4FE;
+
+
+
+@mixin buttons($width, $color:$lilac) {
+    width: $width;
+    background-color: $color;
+    color: $white;
+    font-size: 16px;
+}
+
+@mixin container_full {
+    max-width: 1350px;
+    margin: 0 auto;
+    display: flex;
+}
+
+@mixin container_medium {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: flex;
+}
+
+body {
+    font-family: $font;
+}
+
+.header {
+    @include container_full;
+    margin-top: 40px;
+    &__logo {
+        padding-left: 5px;
+    }
+    &__nav_bar {
+        margin-left: 15%;
+        display: flex;
+        &-link {
+            margin: 0 18.6px;
+            padding-top: 17px;
+            color: $lilac;
+            text-transform: uppercase;
+            font-size: 16px;
+            font-weight: bold;
+            &:hover {
+                text-decoration: none;
+                color: $pink;
+            }
+
+        }
+        &-button {
+            background-color: $lilac;
+            color: $white;
+            margin: 0 18.6px;
+            padding-top: 17px;
+            &:hover {
+                color: $white;
+                text-decoration: none;
+            }
+            div {
+                width: 230px;
+                padding-left: 10%;
+            }
+            img {
+                padding-right: 8px;
+            }
+        }
+    }
+}
+
+.main_container {
+    width: 100%;
+    background-image: url(img/back.png);
+    background-size: 100% 798px;
+    background-repeat: no-repeat;
+    &__poster {
+        @include container_medium;
+    }
+    &__text {
+        width: 50%;
+        margin-top: 160px;
+        h1 {
+            color: $pink;
+            font-size: 69px;
+            font-weight: bold;
+        }
+        p {
+            font-weight: 300;
+            font-size: 16px;
+            color: #000D70;
+        }
+        a {
+            text-decoration: none;
+
+        }
+        a > div {
+            @include buttons(320px, $pink);
+            text-align: center;
+            font-weight: bold;
+            text-transform: uppercase;
+            height: 40px;
+            padding-top: 7px;
+            text-decoration: none;
+        }
+    }
+}
+
+.slider_row {
+    width: 1350px;
+    display: flex;
+    margin: 0 auto;
+    background-color: $lilac;
+    -webkit-box-shadow: 0px 11px 21px-11px $lilac;
+    -moz-box-shadow: 0px 11px 21px-11px $lilac;
+    box-shadow: 0px 11px 21px -11px $lilac;
+    h1 {
+        margin-top: 74px;
+            margin-bottom: 20px;
+        font-size: 40px;
+        color: $white;
+        font-weight: bold;
+    }
+    p {
+        
+        color: $white;
+        font-size: 16px;
+
+    }
+    span{
+        font-weight: bold;
+    }
+    &__col1 {
+        padding: 0px 90px 0px 50px;
+        width: 550px;
+    }
+    &__col2 {
+        width: 1350px-550px;
+        padding: 0 90px;
+        background-image: url(img/slider.png);
+        &__sircle{
+            margin-top: 90px;
+            img{
+                    margin-right: 5px;
+                margin-bottom: 30px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+.good_for_people{
+    margin: 150px auto 0 auto;
+    width: 1250px;
+    &__child_or_man{
+        display: flex;
+        margin-bottom: 30px;
+        span{
+            font-family: $font;
+            font-size: 40px;
+            font-weight: bold;
+            color:$black;
+            margin-right: 40px;
+            cursor: pointer;
+        }
+        span.active{
+            border-bottom-width: 3px;
+            border-bottom-style: solid;
+            border-bottom-color: $lilac;
+            color:$lilac;
+            cursor: auto;
+            
+        }
+    }
+    &__content{
+        display: flex;
+        div{
+            width: 18%;
+            margin-right: 7%;
+            div{
+                height: 170px;
+            }
+            h2{
+                font-family: $font;
+                font-size: 18px;
+                color: $black;
+                font-weight: 600;
+            }
+            p{
+               font-family: $font;
+                font-size: 18px;
+                color: $black; 
+                line-height: 1.3;
+                margin-bottom: 80px;
+            }
+        }
+    }
+
+}
