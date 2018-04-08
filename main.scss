@@ -121,18 +121,18 @@ body {
     box-shadow: 0px 11px 21px -11px $lilac;
     h1 {
         margin-top: 74px;
-            margin-bottom: 20px;
+        margin-bottom: 20px;
         font-size: 40px;
         color: $white;
         font-weight: bold;
     }
     p {
-        
+
         color: $white;
         font-size: 16px;
 
     }
-    span{
+    span {
         font-weight: bold;
     }
     &__col1 {
@@ -143,61 +143,114 @@ body {
         width: 1350px-550px;
         padding: 0 90px;
         background-image: url(img/slider.png);
-        &__sircle{
+        &__sircle {
             margin-top: 90px;
-            img{
-                    margin-right: 5px;
+            img {
+                margin-right: 5px;
                 margin-bottom: 30px;
                 cursor: pointer;
             }
         }
     }
 }
-.good_for_people{
+
+.good_for_people {
     margin: 150px auto 0 auto;
     width: 1250px;
-    &__child_or_man{
+    &__child_or_man {
         display: flex;
         margin-bottom: 30px;
-        span{
+        span {
             font-family: $font;
             font-size: 40px;
             font-weight: bold;
-            color:$black;
+            color: $black;
             margin-right: 40px;
             cursor: pointer;
         }
-        span.active{
+        span.active {
             border-bottom-width: 3px;
             border-bottom-style: solid;
             border-bottom-color: $lilac;
-            color:$lilac;
+            color: $lilac;
             cursor: auto;
-            
+
         }
     }
-    &__content{
+    &__content {
         display: flex;
-        div{
+        div {
             width: 18%;
             margin-right: 7%;
-            div{
+            div {
                 height: 170px;
             }
-            h2{
+            h2 {
                 font-family: $font;
                 font-size: 18px;
                 color: $black;
                 font-weight: 600;
             }
-            p{
-               font-family: $font;
+            p {
+                font-family: $font;
                 font-size: 18px;
-                color: $black; 
+                color: $black;
                 line-height: 1.3;
                 margin-bottom: 80px;
             }
         }
     }
 
+}
+
+.form_body {
+    @include container_full;
+    background-color: $gray;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 3.5%;
+    padding-right: 3.5%;
+    p {
+        width: 400/1350*100%;
+        margin: 0 10px;
+        font-family: $font;
+        font-size: 24px;
+        font-weight: 600;
+        color: $black;
+        line-height: 1.3;
+        span {
+            color: $lilac;
+            border-bottom-width: 3px;
+            border-bottom-style: solid;
+            border-bottom-color: $lilac;
+        }
+
+
+    }
+    &__name,&__number_phone {
+        background: $gray;
+        outline: none;
+        border: 2px solid #9FB6C9;
+        padding-left: 15px;
+        width: 295px;
+        font-weight: 500;
+        font-size: 18px;
+        margin: 0 10px;
+        color: #9FB6C9;
+        line-height: 1.3;
+    }
+    ::-webkit-input-placeholder {
+        color: #9FB6C9;
+    }
+    ::-moz-placeholder {
+        color: #9FB6C9;
+    }
+    /* Firefox 19+ */
+    :-moz-placeholder {
+        color: #9FB6C9;
+    }
+    /* Firefox 18- */
+    :-ms-input-placeholder {
+        color: #9FB6C9;
+    }
 }
