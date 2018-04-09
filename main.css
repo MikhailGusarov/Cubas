@@ -184,6 +184,9 @@ body {
   .form_body :-ms-input-placeholder {
     color: #9FB6C9; }
   .form_body__button {
-    text-transform: uppercase; }
+    background-color: #810DF1;
+    color: #FFFFFF;
+    margin: 0 18.6px;
+    padding-top: 17px; }
 
 /*# sourceMappingURL=main.css.map */

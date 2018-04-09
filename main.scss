@@ -227,7 +227,8 @@ body {
 
 
     }
-    &__name,&__number_phone {
+    &__name,
+    &__number_phone {
         background: $gray;
         outline: none;
         border: 2px solid #9FB6C9;
@@ -253,7 +254,10 @@ body {
     :-ms-input-placeholder {
         color: #9FB6C9;
     }
-    &__button{
-        text-transform: uppercase;
+    &__button {
+        background-color: #810DF1;
+        color: #FFFFFF;
+        margin: 0 18.6px;
+        padding-top: 17px;
     }
 }
