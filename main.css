@@ -198,7 +198,7 @@ body {
     background-color: #810DF1;
     color: #FFFFFF;
     margin-left: 10px;
-    padding: 0 40px;
+    padding: 0 25px;
     border: none;
     font-size: 16px;
     font-weight: bold; }
@@ -209,11 +209,11 @@ body {
 
 .about_us {
   width: 1340px;
-  margin: 80px auto 0 auto;
+  margin: 90px auto 0 auto;
   padding-left: 3.5%;
   padding-right: 3.5%;
-  padding-top: 80px;
-  padding-bottom: 60px;
+  padding-top: 70px;
+  padding-bottom: 70px;
   border: #E4E4FE 2px solid;
   color: #2F233A; }
   .about_us__col1 h2 {
@@ -221,7 +221,8 @@ body {
 
 .employment {
   width: 1250px;
-  margin: 80px auto 0 auto; }
+  margin: 100px auto 0 auto;
+  color: #2F233A; }
   .employment h2 {
     font-weight: bold;
     margin-bottom: 30px; }
@@ -229,27 +230,47 @@ body {
     display: flex; }
   .employment__col {
     border: #F10D70 4px solid;
-    width: 30%;
-    margin-right: 5%; }
+    width: 32%;
+    margin-right: 2%;
+    height: 410px; }
+    .employment__col a {
+      color: inherit;
+      text-decoration: none; }
+    .employment__col h3 {
+      font-size: 28px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin: 44px 0 20px 50px;
+      max-width: 280px;
+      height: 66px; }
+    .employment__col ul {
+      margin-left: 50px;
+      max-width: 280px;
+      height: 185px; }
+      .employment__col ul li {
+        margin-bottom: 20px;
+        line-height: 1.1; }
     .employment__col ul > li:before {
       content: '';
       position: absolute;
       left: 8px;
       width: 10px;
       height: 10px;
-      margin-top: 8px;
+      margin-top: 6px;
       border-radius: 50%;
       background: #F10D70; }
-    .employment__col a {
+    .employment__col span {
       color: #F10D70;
       border-bottom: 2px solid;
-      text-decoration: none; }
+      margin-left: 50px;
+      font-size: 18px;
+      font-weight: bold; }
     .employment__col:last-of-type {
       margin-right: 0;
       border: #F15D0D 4px solid; }
       .employment__col:last-of-type ul > li:before {
         background: #F15D0D; }
-      .employment__col:last-of-type a {
+      .employment__col:last-of-type span {
         color: #F15D0D; }
       .employment__col:last-of-type:hover {
         background: #F15D0D; }
@@ -257,7 +278,7 @@ body {
       border: #810DF1 4px solid; }
       .employment__col:first-of-type ul > li:before {
         background: #810DF1; }
-      .employment__col:first-of-type a {
+      .employment__col:first-of-type span {
         color: #810DF1; }
       .employment__col:first-of-type:hover {
         background: #810DF1; }
@@ -266,7 +287,20 @@ body {
       color: #FFFFFF; }
       .employment__col:hover ul > li:before {
         background: #FFFFFF; }
-      .employment__col:hover a {
+      .employment__col:hover span {
         color: #FFFFFF; }
+
+footer {
+  margin: 80px auto 0 auto;
+  width: 1250px;
+  display: flex;
+  color: #AEAEAE;
+  justify-content: space-between;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px; }
+  footer div > p {
+    line-height: 1.3;
+    margin-bottom: 5px;
+    text-align: center; }
 
 /*# sourceMappingURL=main.css.map */

@@ -271,7 +271,7 @@ body {
         background-color: $lilac;
         color: $white;
         margin-left: 10px;
-        padding: 0 40px;
+        padding: 0 25px;
         border: none;
         font-size: 16px;
         font-weight: bold;
@@ -286,11 +286,11 @@ body {
 
 .about_us {
     width: 1340px;
-    margin: 80px auto 0 auto;
+    margin: 90px auto 0 auto;
     padding-left: 3.5%;
     padding-right: 3.5%;
-    padding-top: 80px;
-    padding-bottom: 60px;
+    padding-top: 70px;
+    padding-bottom: 70px;
     border: $gray 2px solid;
     color: $black;
     &__col1 {
@@ -303,7 +303,8 @@ body {
 
 .employment {
     width: 1250px;
-    margin: 80px auto 0 auto;
+    margin: 100px auto 0 auto;
+    color: $black;
     h2 {
         font-weight: bold;
         margin-bottom: 30px;
@@ -313,58 +314,99 @@ body {
     }
     &__col {
         border: $pink 4px solid;
-        width: 30%;
-        margin-right: 5%;
+        width: 32%;
+        margin-right: 2%;
+        height: 410px;
+        a{
+            color: inherit;
+            text-decoration: none;
+        }
+        h3 {
+            font-size: 28px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 44px 0 20px 50px;
+            max-width: 280px;
+            height: 66px;
+        }
+        ul {
+            margin-left: 50px;
+            max-width: 280px;
+
+            height: 185px;
+            li {
+                margin-bottom: 20px;
+                line-height: 1.1;
+            }
+        }
         ul > li:before {
             content: '';
             position: absolute;
             left: 8px;
             width: 10px;
             height: 10px;
-            margin-top: 8px;
+            margin-top: 6px;
             border-radius: 50%;
             background: $pink;
         }
-        a{
-                color:$pink;
-                border-bottom: 2px solid;
-            text-decoration:none;
-            }
+        span {
+            color: $pink;
+            border-bottom: 2px solid;
+            margin-left: 50px;
+            font-size: 18px;
+            font-weight: bold;
+
+        }
         &:last-of-type {
             margin-right: 0;
             border: $orange 4px solid;
-            ul > li:before{
-                background:$orange;
+            ul > li:before {
+                background: $orange;
             }
-            a{
-                color:$orange;
+            span {
+                color: $orange;
             }
-            &:hover{
-               background:$orange; 
+            &:hover {
+                background: $orange;
             }
         }
         &:first-of-type {
             border: $lilac 4px solid;
-            ul > li:before{
-                background:$lilac;
+            ul > li:before {
+                background: $lilac;
             }
-            a{
-                color:$lilac;
+            span {
+                color: $lilac;
             }
-            &:hover{
-               background:$lilac; 
+            &:hover {
+                background: $lilac;
             }
         }
-        &:hover{
+        &:hover {
             background-color: $pink;
             color: $white;
-            ul > li:before{
-                background:$white;
+            ul > li:before {
+                background: $white;
             }
-            a{
-                color:$white;
+            span {
+                color: $white;
             }
         }
     }
 
+}
+footer{
+    margin: 80px auto 0 auto;
+    width: 1250px;
+    display: flex;
+    color:#AEAEAE;
+    justify-content: space-between;
+    font-family: $font;
+    font-size: 14px;
+    div>p{
+        line-height: 1.3;
+        margin-bottom: 5px;
+        text-align: center;
+        
+    }
 }
