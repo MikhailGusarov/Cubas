@@ -1,3 +1,11 @@
+ul {
+  padding: 0;
+  list-style: none; }
+
+ul > li {
+  position: relative;
+  padding-left: 25px; }
+
 body {
   font-family: "Ubuntu", sans-serif; }
 
@@ -25,7 +33,9 @@ body {
       background-color: #810DF1;
       color: #FFFFFF;
       margin: 0 18.6px;
-      padding-top: 17px; }
+      padding-top: 17px;
+      font-size: 16px;
+      font-weight: bold; }
       .header__nav_bar-button:hover {
         color: #FFFFFF;
         text-decoration: none; }
@@ -123,17 +133,18 @@ body {
       cursor: auto; }
   .good_for_people__content {
     display: flex; }
-    .good_for_people__content div {
-      width: 18%;
+    .good_for_people__content > div {
       margin-right: 7%; }
-      .good_for_people__content div div {
+      .good_for_people__content > div:last-of-type {
+        margin-right: 0%; }
+      .good_for_people__content > div div {
         height: 170px; }
-      .good_for_people__content div h2 {
+      .good_for_people__content > div h2 {
         font-family: "Ubuntu", sans-serif;
         font-size: 18px;
         color: #2F233A;
         font-weight: 600; }
-      .good_for_people__content div p {
+      .good_for_people__content > div p {
         font-family: "Ubuntu", sans-serif;
         font-size: 18px;
         color: #2F233A;
@@ -152,8 +163,8 @@ body {
   /* Firefox 19+ */
   /* Firefox 18- */ }
   .form_body p {
-    width: 29.6296296296%;
-    margin: 0 10px;
+    width: 29%;
+    margin: 0 10px 0 0;
     font-family: "Ubuntu", sans-serif;
     font-size: 24px;
     font-weight: 600;
@@ -186,7 +197,76 @@ body {
   .form_body__button {
     background-color: #810DF1;
     color: #FFFFFF;
-    margin: 0 18.6px;
-    padding-top: 17px; }
+    margin-left: 10px;
+    padding: 0 40px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold; }
+    .form_body__button:checked {
+      border: none;
+      outline: none;
+      cursor: pointer; }
+
+.about_us {
+  width: 1340px;
+  margin: 80px auto 0 auto;
+  padding-left: 3.5%;
+  padding-right: 3.5%;
+  padding-top: 80px;
+  padding-bottom: 60px;
+  border: #E4E4FE 2px solid;
+  color: #2F233A; }
+  .about_us__col1 h2 {
+    font-weight: bold; }
+
+.employment {
+  width: 1250px;
+  margin: 80px auto 0 auto; }
+  .employment h2 {
+    font-weight: bold;
+    margin-bottom: 30px; }
+  .employment > div {
+    display: flex; }
+  .employment__col {
+    border: #F10D70 4px solid;
+    width: 30%;
+    margin-right: 5%; }
+    .employment__col ul > li:before {
+      content: '';
+      position: absolute;
+      left: 8px;
+      width: 10px;
+      height: 10px;
+      margin-top: 8px;
+      border-radius: 50%;
+      background: #F10D70; }
+    .employment__col a {
+      color: #F10D70;
+      border-bottom: 2px solid;
+      text-decoration: none; }
+    .employment__col:last-of-type {
+      margin-right: 0;
+      border: #F15D0D 4px solid; }
+      .employment__col:last-of-type ul > li:before {
+        background: #F15D0D; }
+      .employment__col:last-of-type a {
+        color: #F15D0D; }
+      .employment__col:last-of-type:hover {
+        background: #F15D0D; }
+    .employment__col:first-of-type {
+      border: #810DF1 4px solid; }
+      .employment__col:first-of-type ul > li:before {
+        background: #810DF1; }
+      .employment__col:first-of-type a {
+        color: #810DF1; }
+      .employment__col:first-of-type:hover {
+        background: #810DF1; }
+    .employment__col:hover {
+      background-color: #F10D70;
+      color: #FFFFFF; }
+      .employment__col:hover ul > li:before {
+        background: #FFFFFF; }
+      .employment__col:hover a {
+        color: #FFFFFF; }
 
 /*# sourceMappingURL=main.css.map */

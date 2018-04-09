@@ -7,7 +7,15 @@ $black: #2F233A;
 $orange:#F15D0D;
 $gray:#E4E4FE;
 
+ul {
+    padding: 0;
+    list-style: none;
+}
 
+ul > li {
+    position: relative;
+    padding-left: 25px;
+}
 
 @mixin buttons($width, $color:$lilac) {
     width: $width;
@@ -59,6 +67,8 @@ body {
             color: $white;
             margin: 0 18.6px;
             padding-top: 17px;
+            font-size: 16px;
+            font-weight: bold;
             &:hover {
                 color: $white;
                 text-decoration: none;
@@ -179,9 +189,12 @@ body {
     }
     &__content {
         display: flex;
-        div {
-            width: 18%;
+        > div {
+
             margin-right: 7%;
+            &:last-of-type {
+                margin-right: 0%;
+            }
             div {
                 height: 170px;
             }
@@ -211,8 +224,8 @@ body {
     padding-left: 3.5%;
     padding-right: 3.5%;
     p {
-        width: 400/1350*100%;
-        margin: 0 10px;
+        width: 29%;
+        margin: 0 10px 0 0;
         font-family: $font;
         font-size: 24px;
         font-weight: 600;
@@ -255,9 +268,103 @@ body {
         color: #9FB6C9;
     }
     &__button {
-        background-color: #810DF1;
-        color: #FFFFFF;
-        margin: 0 18.6px;
-        padding-top: 17px;
+        background-color: $lilac;
+        color: $white;
+        margin-left: 10px;
+        padding: 0 40px;
+        border: none;
+        font-size: 16px;
+        font-weight: bold;
+        &:checked {
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+
     }
+}
+
+.about_us {
+    width: 1340px;
+    margin: 80px auto 0 auto;
+    padding-left: 3.5%;
+    padding-right: 3.5%;
+    padding-top: 80px;
+    padding-bottom: 60px;
+    border: $gray 2px solid;
+    color: $black;
+    &__col1 {
+        h2 {
+            font-weight: bold;
+        }
+
+    }
+}
+
+.employment {
+    width: 1250px;
+    margin: 80px auto 0 auto;
+    h2 {
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+    > div {
+        display: flex;
+    }
+    &__col {
+        border: $pink 4px solid;
+        width: 30%;
+        margin-right: 5%;
+        ul > li:before {
+            content: '';
+            position: absolute;
+            left: 8px;
+            width: 10px;
+            height: 10px;
+            margin-top: 8px;
+            border-radius: 50%;
+            background: $pink;
+        }
+        a{
+                color:$pink;
+                border-bottom: 2px solid;
+            text-decoration:none;
+            }
+        &:last-of-type {
+            margin-right: 0;
+            border: $orange 4px solid;
+            ul > li:before{
+                background:$orange;
+            }
+            a{
+                color:$orange;
+            }
+            &:hover{
+               background:$orange; 
+            }
+        }
+        &:first-of-type {
+            border: $lilac 4px solid;
+            ul > li:before{
+                background:$lilac;
+            }
+            a{
+                color:$lilac;
+            }
+            &:hover{
+               background:$lilac; 
+            }
+        }
+        &:hover{
+            background-color: $pink;
+            color: $white;
+            ul > li:before{
+                background:$white;
+            }
+            a{
+                color:$white;
+            }
+        }
+    }
+
 }
