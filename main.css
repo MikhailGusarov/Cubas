@@ -183,5 +183,7 @@ body {
     color: #9FB6C9; }
   .form_body :-ms-input-placeholder {
     color: #9FB6C9; }
+  .form_body__button {
+    text-transform: uppercase; }
 
 /*# sourceMappingURL=main.css.map */

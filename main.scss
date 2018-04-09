@@ -253,4 +253,7 @@ body {
     :-ms-input-placeholder {
         color: #9FB6C9;
     }
+    &__button{
+        text-transform: uppercase;
+    }
 }
