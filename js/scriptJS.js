@@ -1,14 +1,38 @@
-document.getElementsByClassName("good_for_people__content")[0].className+=" actives";
-document.querySelector('.good_for_people__child_or_man span').className+=" active";
-var massive_span=document.querySelectorAll('.good_for_people__child_or_man span');
+"use strict"
+var class_label = "good_for_people__child_or_man";
+var class_content = "good_for_people__content";
 
-var a=function(){
-    document.getElementsByClassName("active")[0].classList.remove("active");
-    this.classList.add("active");   
+//Делаем начальную позицию для элементов
+function set_start_position(class_label, class_content) {
+    document.querySelector('.' + class_label + ' span').className += " active";
+    var elements_content = document.getElementsByClassName(class_content);
+    for (var i = 1; i < elements_content.length; i++) {
+        elements_content[i].setAttribute("style", "display:none;");
+    }
+}
+
+set_start_position(class_label, class_content);
+
+//функция, которая меняет активность
+function change_active() {
+    //проверка на активность
+    if(this.className=="active"){
+       return false;
+    }
+    //меняем активность заголовка
+    function change_active_label(class_click) {
+        document.getElementsByClassName("active")[0].classList.remove("active");
+        class_click.classList.add("active");
+    }
+    //показываем активное содержимое
+    function change_active_content(class_click) {
+        // я устал и хочу спать. Затра допишу
+    }
+    change_active_label(this);
 };
 
-for(var i=0;i<massive_span.length;i++){
-    massive_span[i].addEventListener("click",a);
+for (var i = 0; i < document.querySelectorAll('.' + class_label + ' span').length; i++) {
+    document.querySelectorAll('.' + class_label + ' span')[i].addEventListener("click", change_active);
 };
 
 
