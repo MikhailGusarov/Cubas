@@ -13,7 +13,7 @@ body {
   max-width: 1350px;
   margin: 0 auto;
   display: flex;
-  margin-top: 40px; }
+  padding-top: 40px; }
   .header__logo {
     padding-left: 5px; }
   .header__nav_bar {
@@ -306,5 +306,11 @@ footer {
     line-height: 1.3;
     margin-bottom: 5px;
     text-align: center; }
+
+.feedback_form {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: black; }
 
 /*# sourceMappingURL=main.css.map */

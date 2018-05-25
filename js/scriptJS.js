@@ -55,3 +55,6 @@ for (var i = 0; i < document.querySelectorAll('.' + class_label + ' span').lengt
 }
 
 change_in_good_for_people("good_for_people__child_or_man","good_for_people__content");
+
+
+//функция, которая скрывает весь сайт
