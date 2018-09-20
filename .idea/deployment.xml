@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="Shtori">
+    <serverData>
+      <paths name="Shtori">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/admin/web/shtori.ru/public_html" local="$PROJECT_DIR$/../stori/shtori2906" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>
