@@ -1,7 +1,7 @@
 /*Функция для блока "Польза для детей/польза для взрослых
 при желании можно добавить сколько угодно блоков*/
 (function () {
-    "use strict"
+    "use strict";
     var class_label = "good_for_people__child_or_man",
         class_content = "good_for_people__content";
 
@@ -29,7 +29,7 @@
 
         for (i = 0; i < document.querySelectorAll('.' + class_label + ' span').length; i++) {
             if (document.querySelectorAll('.' + class_label + ' span')[i].className == "active") {
-                return i
+                var active_num= i;
             }
         }
 
@@ -37,7 +37,7 @@
 
         var elements_content = document.querySelectorAll('.' + class_content);
         for (var i = 0; i < elements_content.length; i++) {
-            if (i == get_active_number()) {
+            if (i == active_num) {
                 elements_content[i].style.display = null;
             } else {
                 elements_content[i].style.display = 'none';
@@ -45,11 +45,11 @@
 
         }
 
-    };
+    }
     //действие клика
     for (var i = 0; i < document.querySelectorAll('.' + class_label + ' span').length; i++) {
         document.querySelectorAll('.' + class_label + ' span')[i].addEventListener("click", change_active);
-    };
+    }
 
 })(document, window)
 
