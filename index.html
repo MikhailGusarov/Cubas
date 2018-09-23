@@ -14,7 +14,17 @@
 </head>
 
 <body>
-   <div class="feedback_form" style="display: none;"></div>
+   <div class="feedback_back">
+       <div class="feedback_call">
+           <form action="" class='feedback_call__form'>
+               <h2>Обратный звонок</h2>
+               <input name="feedback_call__name" type="text" placeholder="Представьтесь">
+               <input name="feedback_call__phone" type="text" placeholder="Номер телефона">
+               <input type="submit" value="ПЕРЕЗВОНИТЬ">
+           </form>
+           <img class='feedback_call__close close_modal' src="img/close.png" alt="">
+       </div>
+   </div>
     <header class="header">
         <div class="header__logo"><a href=""><img src="img/logo.png" alt=""></a></div>
         <div class="header__nav_bar">
@@ -30,9 +40,9 @@
             <a href="" class="header__nav_bar-link">
                 занятия и цены
             </a>
-            <a href="" class="header__nav_bar-button">
+            <div class="header__nav_bar-button feedback_call__button">
                 <div><img src="img/phone.png" alt=""><span>Перезвоните мне</span></div>
-            </a>
+            </div>
         </div>
 
     </header>

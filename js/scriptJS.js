@@ -1,4 +1,4 @@
-/*Функция для блока "Польза для детей/польза для взрослых
+/*TODO Функция для блока "Польза для детей/польза для взрослых
 при желании можно добавить сколько угодно блоков*/
 (function () {
     "use strict";
@@ -50,9 +50,22 @@
     for (var i = 0; i < document.querySelectorAll('.' + class_label + ' span').length; i++) {
         document.querySelectorAll('.' + class_label + ' span')[i].addEventListener("click", change_active);
     }
+// TODO Слайдер
+function showModalCall() {
+        document.querySelector('.feedback_back').classList.add("active_modal");
 
+}
+    function hideModalCall() {
+        document.querySelector('.feedback_back').classList.remove("active_modal");
+
+    }
+document.querySelector('.feedback_call__button').addEventListener('click',showModalCall);
+document.querySelector('.close_modal').addEventListener('click',hideModalCall);
 })(document, window)
 
 
 
-//функция, которая скрывает весь сайт
+
+
+
+
