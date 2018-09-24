@@ -50,9 +50,10 @@
     for (var i = 0; i < document.querySelectorAll('.' + class_label + ' span').length; i++) {
         document.querySelectorAll('.' + class_label + ' span')[i].addEventListener("click", change_active);
     }
-// TODO Слайдер
+// TODO Модальное окно
     function showModalCall() {
         document.querySelector('.feedback_back').classList.add("active_modal");
+        document.querySelector('.feedback_call').style.display = null;
     }
     document.querySelector('.feedback_call__button').addEventListener('click',showModalCall);
     var hide_obj=document.querySelectorAll('.close_modal');
@@ -60,9 +61,14 @@
         hide_obj[i].addEventListener('click',e=>{
             if(!e.target.closest(".feedback_call") || e.target.closest(".feedback_call__close")){
                 document.querySelector('.feedback_back').classList.remove("active_modal");
+                setTimeout(function(){document.querySelector('.feedback_call').style.display = 'none'},1000);
             }
         });
     }
+
+    //TODO Слайдер
+
+
 })(document, window)
 
 
