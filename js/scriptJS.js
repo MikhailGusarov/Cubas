@@ -51,16 +51,18 @@
         document.querySelectorAll('.' + class_label + ' span')[i].addEventListener("click", change_active);
     }
 // TODO Слайдер
-function showModalCall() {
+    function showModalCall() {
         document.querySelector('.feedback_back').classList.add("active_modal");
-
-}
-    function hideModalCall() {
-        document.querySelector('.feedback_back').classList.remove("active_modal");
-
     }
-document.querySelector('.feedback_call__button').addEventListener('click',showModalCall);
-document.querySelector('.close_modal').addEventListener('click',hideModalCall);
+    document.querySelector('.feedback_call__button').addEventListener('click',showModalCall);
+    var hide_obj=document.querySelectorAll('.close_modal');
+    for(var i=0;i<hide_obj.length;i++) {
+        hide_obj[i].addEventListener('click',e=>{
+            if(!e.target.closest(".feedback_call") || e.target.closest(".feedback_call__close")){
+                document.querySelector('.feedback_back').classList.remove("active_modal");
+            }
+        });
+    }
 })(document, window)
 
 

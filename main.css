@@ -434,4 +434,8 @@ footer div > p {
   padding-left: 15px;
 }
 
+.close_modal {
+  cursor: pointer;
+}
+
 /*# sourceMappingURL=main.css.map */
