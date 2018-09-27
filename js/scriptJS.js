@@ -68,6 +68,19 @@
 
     //TODO Слайдер
 
+    var sliders=document.querySelectorAll('.sliderOne');
+    var div_sircle=document.createElement('div');
+    div_sircle.className='slider_row__col2__sircle';
+    for(var i=0;i<sliders.length;i++){
+        if(i===0){
+            div_sircle.innerHTML="<img src='img/krug1.png' alt='' class='active_img'>";
+        }else{
+            div_sircle.innerHTML+="<img src='img/krug1.png' alt=''>";
+        }
+    }
+    // document.querySelectorAll('.slider')[sliders.length-1].appendChild(div_sircle);
+    document.querySelector('.sliders').appendChild(div_sircle);
+
 
 })(document, window)
 

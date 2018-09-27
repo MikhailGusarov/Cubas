@@ -474,7 +474,7 @@ footer{
 .sliders {
     width: 780px;
     position: relative;
-    .slider{
+    .sliderOne{
         background-image: url(img/slider.png);
         padding: 0 100px 100px 50px;
         position: absolute;
@@ -505,6 +505,7 @@ footer{
         }
         .active_img{
             opacity: 1;
+            cursor: auto;
         }
     }
 }
