@@ -410,7 +410,7 @@ footer{
 .feedback_back{
     position: fixed;
     background-color: rgba(0, 0, 0, 0.8);
-    z-index: 1;
+    z-index: 10;
     height: -0;
     opacity: 0;
     width: 100%;
@@ -473,11 +473,11 @@ footer{
 //стили для слайдера
 .sliders {
     width: 780px;
+    position: relative;
     .slider{
         background-image: url(img/slider.png);
         padding: 0 100px 100px 50px;
         position: absolute;
-        margin-right: 85px;
         opacity: 0;
         z-index: 1;
 
@@ -501,6 +501,10 @@ footer{
         img {
             margin-right: 5px;
             cursor: pointer;
+            opacity: 0.2;
+        }
+        .active_img{
+            opacity: 1;
         }
     }
 }
