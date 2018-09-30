@@ -68,9 +68,10 @@
 
     //TODO Слайдер
 
-    var sliders=document.querySelectorAll('.sliderOne');
-    var div_sircle=document.createElement('div');
-    div_sircle.className='slider_row__col2__sircle';
+    //генерация кружков
+        var sliders=document.querySelectorAll('.sliderOne');
+        var div_sircle=document.createElement('div');
+        div_sircle.className='slider_row__col2__sircle';
     for(var i=0;i<sliders.length;i++){
         if(i===0){
             div_sircle.innerHTML="<img src='img/krug1.png' alt='' class='active_img'>";
@@ -78,8 +79,29 @@
             div_sircle.innerHTML+="<img src='img/krug1.png' alt=''>";
         }
     }
-    // document.querySelectorAll('.slider')[sliders.length-1].appendChild(div_sircle);
     document.querySelector('.sliders').appendChild(div_sircle);
+
+    var currentSlide=0;
+
+
+    function nextSlide(curSlide,neSlide){
+        sliders[curSlide].classList.remove('showing_slide');
+        document.querySelectorAll('.slider_row__col2__sircle img')[curSlide].classList.remove('active_img');
+        sliders[neSlide].classList.add('showing_slide');
+        document.querySelectorAll('.slider_row__col2__sircle img')[neSlide].classList.add('active_img');
+        currentSlide= neSlide;
+    }
+    setInterval(function(){nextSlide(currentSlide,(currentSlide+1)%sliders.length)},3000);
+    for(var i=0;i<sliders.length;i++){
+        document.querySelectorAll('.slider_row__col2__sircle img')[i].addEventListener('click',function () {
+            for(var i=0;i<sliders.length;i++){
+                if(this==document.querySelectorAll('.slider_row__col2__sircle img')[i]){
+                    nextSlide(currentSlide,i);
+                }
+
+            }
+        })
+    }
 
 
 })(document, window)
