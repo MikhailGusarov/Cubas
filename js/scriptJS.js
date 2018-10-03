@@ -51,20 +51,31 @@
         document.querySelectorAll('.' + class_label + ' span')[i].addEventListener("click", change_active);
     }
 // TODO Модальное окно
+
+    //показать модальное окно "Обратный звонок"
     function showModalCall() {
         document.querySelector('.feedback_back').classList.add("active_modal");
-        document.querySelector('.feedback_call').style.display = null;
+        document.querySelector('.modal1').style.display = null;
     }
     document.querySelector('.feedback_call__button').addEventListener('click',showModalCall);
+
+    //скрыть модельное окно
     var hide_obj=document.querySelectorAll('.close_modal');
     for(var i=0;i<hide_obj.length;i++) {
         hide_obj[i].addEventListener('click',e=>{
             if(!e.target.closest(".feedback_call") || e.target.closest(".feedback_call__close")){
                 document.querySelector('.feedback_back').classList.remove("active_modal");
-                setTimeout(function(){document.querySelector('.feedback_call').style.display = 'none'},1000);
+                setTimeout(function(){document.querySelector('.feedback_call[style=""]').style.display = 'none'},1000);
             }
         });
     }
+
+    document.querySelector('.first_work').addEventListener('click',function () {
+        document.querySelector('.feedback_back').classList.add("active_modal");
+        document.querySelector('.modal2').style.display = null;
+    });
+
+
 
     //TODO Слайдер
 

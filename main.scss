@@ -113,7 +113,7 @@ body {
             text-decoration: none;
 
         }
-        a > div {
+        div {
             @include buttons(320px, $pink);
             text-align: center;
             font-weight: bold;
@@ -121,6 +121,7 @@ body {
             height: 40px;
             padding-top: 7px;
             text-decoration: none;
+            cursor: pointer;
         }
     }
 }
@@ -464,6 +465,19 @@ footer{
             color: $blue_gray;
             padding-left: 15px;
         }
+        select{
+            width: 99%;
+            margin-bottom: 30px;
+            height: 50px;
+            border: 2px solid $blue_gray;
+            color: $blue_gray;
+            padding-left: 15px;
+            cursor: pointer;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+
     }
 }
 .close_modal{

@@ -69,7 +69,7 @@ body {
       color: #000D70; }
     .main_container__text a {
       text-decoration: none; }
-    .main_container__text a > div {
+    .main_container__text div {
       width: 320px;
       background-color: #F10D70;
       color: #FFFFFF;
@@ -79,7 +79,8 @@ body {
       text-transform: uppercase;
       height: 40px;
       padding-top: 7px;
-      text-decoration: none; }
+      text-decoration: none;
+      cursor: pointer; }
 
 .slider_row {
   width: 1350px;
@@ -342,6 +343,17 @@ footer {
       border: 2px solid #7D9CB6;
       color: #7D9CB6;
       padding-left: 15px; }
+    .feedback_call__form select {
+      width: 99%;
+      margin-bottom: 30px;
+      height: 50px;
+      border: 2px solid #7D9CB6;
+      color: #7D9CB6;
+      padding-left: 15px;
+      cursor: pointer;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none; }
 
 .close_modal {
   cursor: pointer; }
