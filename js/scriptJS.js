@@ -62,7 +62,7 @@
     //скрыть модельное окно
     var hide_obj=document.querySelectorAll('.close_modal');
     for(var i=0;i<hide_obj.length;i++) {
-        hide_obj[i].addEventListener('click',e=>{
+        hide_obj[i].addEventListener('click', e=>{
             if(!e.target.closest(".feedback_call") || e.target.closest(".feedback_call__close")){
                 document.querySelector('.feedback_back').classList.remove("active_modal");
                 setTimeout(function(){document.querySelector('.feedback_call[style=""]').style.display = 'none'},1000);
