@@ -416,6 +416,7 @@ footer{
     opacity: 0;
     width: 100%;
     transition: 1s;
+    display: inline-flex;
 
 }
 .active_modal{
@@ -489,7 +490,7 @@ footer{
     width: 780px;
     position: relative;
     .sliderOne{
-        background-image: url(img/slider.png);
+
         padding: 0 100px 100px 50px;
         position: absolute;
         opacity: 0;

@@ -14,6 +14,7 @@
     <title>Объединение педагогов по спидкубингу</title>
 </head>
 <body>
+<?php require 'MySQL-pdo.php'?>
 <div class="feedback_back close_modal">
     <div class="feedback_call modal1" style="display: none;">
         <form action="" class='feedback_call__form'>
