@@ -62,18 +62,37 @@
     //скрыть модельное окно
     var hide_obj=document.querySelectorAll('.close_modal');
     for(var i=0;i<hide_obj.length;i++) {
-        hide_obj[i].addEventListener('click', e=>{
+        hide_obj[i].addEventListener('click', function (e){
             if(!e.target.closest(".feedback_call") || e.target.closest(".feedback_call__close")){
                 document.querySelector('.feedback_back').classList.remove("active_modal");
                 setTimeout(function(){document.querySelector('.feedback_call[style=""]').style.display = 'none'},1000);
+            var modalOption=document.querySelectorAll('.feedback_call__form option');
+            for(var j=0;j<modalOption.length;j++){
+                    modalOption[i].removeAttribute('selected');
+            }
+            modalOption[0].setAttribute('selected', null);
             }
         });
     }
+for(var i=0; i<document.querySelectorAll('.first_work').length;i++){
+    document.querySelectorAll('.first_work')[i].addEventListener('click',function (e){
 
-    document.querySelector('.first_work').addEventListener('click',function () {
+        console.log (e.target.getAttribute('data-emp'));
+        var modalOption=document.querySelectorAll('.feedback_call__form option');
+
         document.querySelector('.feedback_back').classList.add("active_modal");
+
+        for(var j=0;j<modalOption.length;j++){
+            modalOption[j].removeAttribute('selected');
+            if(modalOption[j].value==e.target.getAttribute('data-emp')){
+                modalOption[j].setAttribute('selected', null);
+            }
+        }
+        // this.getAttribute('data-emp');
         document.querySelector('.modal2').style.display = null;
     });
+}
+
 
 
 

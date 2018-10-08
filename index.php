@@ -140,20 +140,19 @@
     <h2>Формы занятий</h2>
     <div class="">
         <?php
-        $serviceQuery=$conn->query('select * from service');
-        $dataService=$serviceQuery->fetchAll();
+
         for($i=0;$i<count($dataService);$i++){
             ?>
-            <div class="employment__col">
-                <a href="">
+            <div class="employment__col first_work" data-emp="<?php echo $dataService[$i]['name']?>">
+
                     <h3><?php echo $dataService[$i]['name']?></h3>
                     <ul>
                         <li>От <?php echo $dataService[$i]['price']?> рублей</li>
                         <li>Занятие <?php echo $dataService[$i]['time']?> минут</li>
                         <?php echo $dataService[$i]['text']?>
                     </ul>
-                    <span>Записаться</span>
-                </a>
+                    <span class="first_work" >Записаться</span>
+
             </div>
             <?php
         }

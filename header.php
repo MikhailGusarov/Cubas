@@ -14,7 +14,11 @@
     <title>Объединение педагогов по спидкубингу</title>
 </head>
 <body>
-<?php require 'MySQL-pdo.php'?>
+<?php require 'MySQL-pdo.php';
+
+$serviceQuery=$conn->query('select * from service');
+        $dataService=$serviceQuery->fetchAll();
+?>
 <div class="feedback_back close_modal">
     <div class="feedback_call modal1" style="display: none;">
         <form action="" class='feedback_call__form'>
@@ -33,9 +37,13 @@
             <input name="feedback_call__name" type="text" placeholder="Представьтесь">
             <input name="feedback_call__phone" type="text" placeholder="Номер телефона">
             <select>
-                <option>Индивидуальное занятие</option>
-                <option>Групповое занятие</option>
-                <option>Мастер класс</option>
+                <?php
+                for($i=0;$i<count($dataService);$i++){
+                    ?>
+                <option><?php echo $dataService[$i]['name']?></option>
+                <?php
+                }
+                ?>
             </select>
             <input type="submit" value="ОСТАВИТЬ ЗАЯВКУ">
         </form>

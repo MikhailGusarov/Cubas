@@ -227,7 +227,8 @@ body {
     width: 32%;
     margin-right: 2%;
     height: 410px;
-    transition: 3s; }
+    transition: 3s;
+    cursor: pointer; }
     .employment__col a {
       color: inherit;
       text-decoration: none; }
