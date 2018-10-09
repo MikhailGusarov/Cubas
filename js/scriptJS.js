@@ -51,7 +51,7 @@
         document.querySelectorAll('.' + class_label + ' span')[i].addEventListener("click", change_active);
     }
 // TODO Модальное окно
-
+    document.querySelector('.modal2 option:first-child').setAttribute('selected', 'selected');
     //показать модальное окно "Обратный звонок"
     function showModalCall() {
         document.querySelector('.feedback_back').classList.add("active_modal");
@@ -66,31 +66,23 @@
             if(!e.target.closest(".feedback_call") || e.target.closest(".feedback_call__close")){
                 document.querySelector('.feedback_back').classList.remove("active_modal");
                 setTimeout(function(){document.querySelector('.feedback_call[style=""]').style.display = 'none'},1000);
-            var modalOption=document.querySelectorAll('.feedback_call__form option');
-            for(var j=0;j<modalOption.length;j++){
-                    modalOption[i].removeAttribute('selected');
-            }
-            modalOption[0].setAttribute('selected', null);
             }
         });
     }
-for(var i=0; i<document.querySelectorAll('.first_work').length;i++){
-    document.querySelectorAll('.first_work')[i].addEventListener('click',function (e){
 
-        console.log (e.target.getAttribute('data-emp'));
-        var modalOption=document.querySelectorAll('.feedback_call__form option');
-
+    document.querySelector('.first_work').addEventListener('click',function (){
         document.querySelector('.feedback_back').classList.add("active_modal");
-
-        for(var j=0;j<modalOption.length;j++){
-            modalOption[j].removeAttribute('selected');
-            if(modalOption[j].value==e.target.getAttribute('data-emp')){
-                modalOption[j].setAttribute('selected', null);
-            }
-        }
-        // this.getAttribute('data-emp');
         document.querySelector('.modal2').style.display = null;
     });
+
+for(var i=0;i<document.querySelectorAll('.record_work').length;i++){
+    document.querySelectorAll('.record_work')[i].addEventListener('click',function(){
+        document.querySelector('.feedback_back').classList.add("active_modal");
+        document.querySelector('.modal2').style.display = null;
+        document.querySelector('.modal2 option[selected="selected"]').removeAttribute('selected');
+        document.querySelector('.modal2 option[value="'
+            +this.getAttribute("data-emp")+'"]').setAttribute('selected', 'selected');
+    })
 }
 
 

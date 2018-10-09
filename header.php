@@ -40,7 +40,7 @@ $serviceQuery=$conn->query('select * from service');
                 <?php
                 for($i=0;$i<count($dataService);$i++){
                     ?>
-                <option><?php echo $dataService[$i]['name']?></option>
+                <option value="<?php echo $dataService[$i]['name']?>"><?php echo $dataService[$i]['name']?></option>
                 <?php
                 }
                 ?>

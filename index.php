@@ -5,7 +5,7 @@
         <div class="main_container__text">
             <h1>Обучение сборке кубика Рубика</h1>
             <p>и других головоломок для детей и взрослых в Санкт–Петербурге</p>
-            <div class="first_work">Записаться на первое занятие</div>
+            <div class="first_work" >Записаться на первое занятие</div>
         </div>
         <div class="main_container__photo">
             <img src="img/photo.png" alt="">
@@ -143,7 +143,7 @@
 
         for($i=0;$i<count($dataService);$i++){
             ?>
-            <div class="employment__col first_work" data-emp="<?php echo $dataService[$i]['name']?>">
+            <div class="employment__col record_work" data-emp="<?php echo $dataService[$i]['name']?>">
 
                     <h3><?php echo $dataService[$i]['name']?></h3>
                     <ul>
