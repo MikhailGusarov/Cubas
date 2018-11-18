@@ -58,7 +58,7 @@
     document.querySelector('.feedback_call__button').addEventListener('click',showModalCall);
     var hide_obj=document.querySelectorAll('.close_modal');
     for(var i=0;i<hide_obj.length;i++) {
-        hide_obj[i].addEventListener('click',e=>{
+        hide_obj[i].addEventListener('click',e => {
             if(!e.target.closest(".feedback_call") || e.target.closest(".feedback_call__close")){
                 document.querySelector('.feedback_back').classList.remove("active_modal");
                 setTimeout(function(){document.querySelector('.feedback_call').style.display = 'none'},1000);
@@ -95,7 +95,7 @@
     for(var i=0;i<sliders.length;i++){
         document.querySelectorAll('.slider_row__col2__sircle img')[i].addEventListener('click',function () {
             for(var i=0;i<sliders.length;i++){
-                if(this==document.querySelectorAll('.slider_row__col2__sircle img')[i]){
+                if(this == document.querySelectorAll('.slider_row__col2__sircle img')[i]){
                     nextSlide(currentSlide,i);
                 }
 
