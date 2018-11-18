@@ -16,7 +16,7 @@
 <body>
 <div class="feedback_back close_modal">
     <div class="feedback_call" style="display: none;">
-        <form action="" class='feedback_call__form'>
+        <form action="index.php" method="POST" class='feedback_call__form'>
             <h2>Обратный звонок</h2>
             <input name="feedback_call__name" type="text" placeholder="Представьтесь">
             <input name="feedback_call__phone" type="text" placeholder="Номер телефона">
@@ -41,7 +41,7 @@
             занятия и цены
         </a>
         <div class="header__nav_bar-button feedback_call__button">
-            <div><img src="../img/phone.png" alt=""><span>Перезвоните мне</span></div>
+            <div><img src="img/phone.png" alt=""><span>Перезвоните мне</span></div>
         </div>
     </div>
 
@@ -173,42 +173,21 @@
 <section id="price" class="employment">
     <h2>Формы занятий</h2>
     <div class="">
+        <?php
+            foreach ($service as $value) :
+        ?>
         <div class="employment__col">
             <a href="">
-                <h3>Индивидуальное занятие</h3>
+                <h3><?=$value['name'];?></h3>
                 <ul>
-                    <li>От 1000 рублей</li>
-                    <li>Занятие 60 минут</li>
-                    <li>Для детей от 6 лет и взрослы</li>
-                    <li>У вас дома или в другом месте</li>
+                    <li>От <?=$value['price'];?> рублей</li>
+                    <li>Занятие <?=$value['time'];?> минут</li>
+                    <?=$value['text'];?>
                 </ul>
                 <span>Записаться</span>
             </a>
         </div>
-        <div class="employment__col">
-            <a href="">
-                <h3>Групповое занятие</h3>
-                <ul>
-                    <li>От 1600 рублей</li>
-                    <li>Занятие 60 минут</li>
-                    <li>Для центров детского развития, дополнительного школьного образования и т.д</li>
-                    <li>Группы детей (от 6 лет) и взрослых до 6 человек</li>
-                </ul>
-                <span>Записаться</span>
-            </a>
-        </div>
-        <div class="employment__col">
-            <a href="">
-                <h3>Мастер класс</h3>
-                <ul>
-                    <li>От 2000 рублей за час</li>
-                    <li>Занятие 60 минут</li>
-                    <li>Развлечение на день рождения, корпоратив или другой праздник</li>
-                    <li>1-2 педагога, в зависимости от числа гостей</li>
-                </ul>
-                <span>Записаться</span>
-            </a>
-        </div>
+        <?php endforeach;?>
     </div>
 </section>
 <footer>

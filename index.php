@@ -16,7 +16,22 @@ try {
 catch (PDOException $e) {
     die('Запрос завершился неудачей: ' . $e->getMessage());
 }
+try {
+    $sql = 'SELECT * FROM service LIMIT 3;';
+    $res = $db -> query($sql);
+    $service = $res  -> fetchAll();
+}
+catch (PDOException $e) {
+    die('Запрос завершился неудачей: ' . $e->getMessage());
+}
 
+if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
-$pageContent = renderTemplate('template/index.php',['slides' => $slides]);
+}
+
+$pageContent = renderTemplate('template/index.php',
+    [
+        'slides' => $slides,
+        'service' => $service
+    ]);
 echo $pageContent;
